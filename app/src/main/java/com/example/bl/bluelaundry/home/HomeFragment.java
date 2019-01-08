@@ -48,11 +48,10 @@ public class HomeFragment extends Fragment {
 
     private void initializeComponent() {
         imageCarouselViewFlipper = getView().findViewById(R.id.vfImageCarousel);
-        Carousel carousel = new Carousel();
 
-        for (int i = 0; i < carousel.imagesSize(); i++) {
+        for (int i = 0; i < Carousel.images.length; i++) {
             ImageView imageView = new ImageView(getContext());
-            imageView.setImageResource(carousel.getImages(i));
+            imageView.setImageResource(Carousel.images[i]);
             imageCarouselViewFlipper.addView(imageView);
         }
 

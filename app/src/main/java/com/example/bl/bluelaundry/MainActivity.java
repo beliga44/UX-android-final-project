@@ -19,6 +19,7 @@ import android.view.MenuItem;
 
 import com.example.bl.bluelaundry.about.AboutFragment;
 import com.example.bl.bluelaundry.home.HomeFragment;
+import com.example.bl.bluelaundry.items.ItemsFragment;
 import com.example.bl.bluelaundry.login.LoginActivity;
 
 public class MainActivity extends AppCompatActivity
@@ -93,7 +94,7 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_home) {
             switchFragment(HomeFragment.class);
         } else if (id == R.id.nav_items) {
-
+            switchFragment(ItemsFragment.class);
         } else if (id == R.id.nav_about) {
             switchFragment(AboutFragment.class);
         } else if (id == R.id.nav_logout) {
@@ -108,13 +109,12 @@ public class MainActivity extends AppCompatActivity
     private void switchFragment(Class fragmentClass) {
         Fragment fragment = null;
         Class fClass = fragmentClass;
+
         try {
             fragment = (Fragment) fClass.newInstance();
             FragmentManager fragmentManager = getSupportFragmentManager();
             fragmentManager.beginTransaction().replace(R.id.flContent, fragment).commit();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (InstantiationException e) {
+        } catch (IllegalAccessException | InstantiationException e) {
             e.printStackTrace();
         }
     }
