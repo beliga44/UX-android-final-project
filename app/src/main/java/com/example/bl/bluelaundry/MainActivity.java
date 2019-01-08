@@ -17,11 +17,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.bl.bluelaundry.about.AboutFragment;
 import com.example.bl.bluelaundry.home.HomeFragment;
 import com.example.bl.bluelaundry.login.LoginActivity;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, HomeFragment.OnFragmentInteractionListener {
+        implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,8 +49,7 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        HomeFragment homeFragment = HomeFragment.newInstance();
-        getSupportFragmentManager().beginTransaction().add(R.id.flContent, homeFragment).commit();
+        switchFragment(HomeFragment.class);
     }
 
     @Override
@@ -91,12 +91,11 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
-            HomeFragment homeFragment = HomeFragment.newInstance();
-            getSupportFragmentManager().beginTransaction().add(R.id.flContent, homeFragment).commit();
+            switchFragment(HomeFragment.class);
         } else if (id == R.id.nav_items) {
 
         } else if (id == R.id.nav_about) {
-
+            switchFragment(AboutFragment.class);
         } else if (id == R.id.nav_logout) {
             logout();
         }
@@ -126,8 +125,4 @@ public class MainActivity extends AppCompatActivity
         startActivity(i);
     }
 
-    @Override
-    public void onFragmentInteraction(Uri uri) {
-
-    }
 }
