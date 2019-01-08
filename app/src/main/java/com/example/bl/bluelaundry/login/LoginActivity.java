@@ -1,5 +1,5 @@
 package com.example.bl.bluelaundry.login;
-import android.support.design.button.MaterialButton;
+import android.content.Intent;
 import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import com.example.bl.bluelaundry.MainActivity;
 import com.example.bl.bluelaundry.R;
 import com.example.bl.bluelaundry.model.User;
 
@@ -36,13 +37,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         if (hasInvalidInput())
             return;
 
-        clearInputLayout();
         User.name = usernameEditText.getText().toString();
 
-        /**
-         * TODO
-         * Move to home activity
-         */
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        clearInputLayout();
     }
 
     private boolean hasInvalidInput() {

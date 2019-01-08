@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">Blue Laundry</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="blue_laundry_description">
+        Blue Laundry is a laundry business based in Indonesia.\nOur Vision is to be the largest laundry business in
+        Indonesia and to be the future of laundry industry.\nThis year,\nBlue Laundry officially operating in Jakarta city,
+        we are going to develop our business to
+        other cities in the coming year.
+    </string>
 </resources>
