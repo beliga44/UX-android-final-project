@@ -83,6 +83,8 @@ public class HomeFragment extends Fragment {
         }
 
         imageCarouselViewFlipper.setFlipInterval(INTERVAL);
+        imageCarouselViewFlipper.setInAnimation(getContext(), android.R.anim.slide_in_left);
+        imageCarouselViewFlipper.setOutAnimation(getContext(), android.R.anim.slide_out_right);
         imageCarouselViewFlipper.setAutoStart(true);
 
         greetingTextView = getView().findViewById(R.id.tvGreeting);
