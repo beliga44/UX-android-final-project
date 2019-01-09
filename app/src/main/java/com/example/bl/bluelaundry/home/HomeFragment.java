@@ -46,6 +46,10 @@ public class HomeFragment extends Fragment {
         initializeComponent();
     }
 
+    /**
+     * Initialize carousel and greeting text based on current user
+     *
+     */
     private void initializeComponent() {
         imageCarouselViewFlipper = getView().findViewById(R.id.vfImageCarousel);
 

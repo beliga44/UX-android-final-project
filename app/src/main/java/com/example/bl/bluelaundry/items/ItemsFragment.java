@@ -62,6 +62,10 @@ public class ItemsFragment extends Fragment {
         viewPager.setAdapter(adapter);
     }
 
+    /**
+     * Class for tabs adapter
+     *
+     */
     static class Adapter extends FragmentPagerAdapter {
         private final List<Fragment> mFragments = new ArrayList<>();
         private final List<String> mFragmentTitles = new ArrayList<>();

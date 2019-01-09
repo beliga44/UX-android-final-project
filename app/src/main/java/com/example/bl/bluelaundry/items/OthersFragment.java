@@ -55,6 +55,10 @@ public class OthersFragment extends Fragment {
         });
     }
 
+    /**
+     * Add other service data to array adapter
+     *
+     */
     private void populateData() {
         ArrayAdapter<String> arrayAdapterOther = new ArrayAdapter<>(getActivity(), R.layout.list_other, Other.others);
         otherListView.setAdapter(arrayAdapterOther);

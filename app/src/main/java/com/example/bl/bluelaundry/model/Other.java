@@ -1,5 +1,9 @@
 package com.example.bl.bluelaundry.model;
 
+/**
+ * Other Service data
+ *
+ */
 public class Other {
     public static String[] others = {
             "Membership",

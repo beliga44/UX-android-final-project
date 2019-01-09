@@ -54,6 +54,10 @@ public class ClothingFragment extends Fragment {
         });
     }
 
+    /**
+     * Add clothes data to array adapter
+     *
+     */
     private void populateData() {
         ArrayAdapter<String> arrayAdapterClothes = new ArrayAdapter<>(getActivity(), R.layout.list_cloth, Cloth.clothes);
         clothListView.setAdapter(arrayAdapterClothes);

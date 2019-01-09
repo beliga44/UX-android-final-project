@@ -1,6 +1,11 @@
 package com.example.bl.bluelaundry.model;
 
+/**
+ * Clothes data
+ *
+ */
 public class Cloth {
+
     public static String[] clothes = {
             "Manual Wash",
             "Dry Cleaning",
